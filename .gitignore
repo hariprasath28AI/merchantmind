@@ -1,0 +1,25 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Node
+dashboard/node_modules/
+dashboard/build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated
+*.docx
+data/mock_transactions.json
+data/mock_settlements.json
+data/anomalies_manifest.json
