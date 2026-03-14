@@ -20,6 +20,3 @@ Thumbs.db
 
 # Generated
 *.docx
-data/mock_transactions.json
-data/mock_settlements.json
-data/anomalies_manifest.json

@@ -1,0 +1,100 @@
+[
+  {
+    "index": 50,
+    "order_id": "v1-260314080339-aa-jvGXHr",
+    "type": "settlement_shortfall",
+    "description": "Captured \u20b91,500 but settled \u20b91,300 \u2014 \u20b9200 gap (REAL order on sandbox)",
+    "expected_action": "auto_refund",
+    "severity": "MEDIUM"
+  },
+  {
+    "index": 100,
+    "order_id": "v1-260314080704-aa-HiRhlJ",
+    "type": "duplicate_refund",
+    "description": "Refund REF_789 already processed for \u20b9750, second refund request incoming (REAL order on sandbox)",
+    "expected_action": "block_and_flag",
+    "severity": "HIGH"
+  },
+  {
+    "index": "200-204",
+    "order_ids": [
+      "v1-260314-DEMO-003-0",
+      "v1-260314-DEMO-003-1",
+      "v1-260314-DEMO-003-2",
+      "v1-260314-DEMO-003-3",
+      "v1-260314-DEMO-003-4"
+    ],
+    "type": "refund_velocity_fraud",
+    "description": "5 refunds to CARD_FRAUD_001 in 60 min totalling \u20b92,500",
+    "expected_action": "fraud_alert",
+    "severity": "CRITICAL"
+  },
+  {
+    "index": 120,
+    "order_id": "v1-260314080824-aa-v9WtQz",
+    "type": "over_settlement",
+    "description": "Captured \u20b92,000 but settled \u20b92,500 \u2014 \u20b9500 extra credited (REAL order on sandbox)",
+    "expected_action": "flag_for_review",
+    "severity": "MEDIUM"
+  },
+  {
+    "index": 160,
+    "order_id": "v1-260314-DEMO-005",
+    "type": "late_settlement",
+    "description": "Payment captured 5 days ago (\u20b92,500), still no settlement",
+    "expected_action": "escalate_to_support",
+    "severity": "HIGH"
+  },
+  {
+    "index": 250,
+    "order_id": "v1-260314-DEMO-006",
+    "type": "refund_exceeds_capture",
+    "description": "Refund of \u20b93,000 requested on \u20b92,000 capture",
+    "expected_action": "block_refund",
+    "severity": "HIGH"
+  },
+  {
+    "index": "300-301",
+    "order_ids": [
+      "v1-260314-DEMO-007-0",
+      "v1-260314-DEMO-007-1"
+    ],
+    "type": "duplicate_order",
+    "description": "Same merchant_order_reference MOR_DUP_LAPTOP, two charges of \u20b94,500",
+    "expected_action": "cancel_duplicate",
+    "severity": "HIGH"
+  },
+  {
+    "index": 350,
+    "order_id": "v1-260314-DEMO-008",
+    "type": "high_value_outlier",
+    "description": "Single txn \u20b949,000 \u2014 merchant avg is ~\u20b91,500. 32x standard deviation",
+    "expected_action": "hold_for_confirmation",
+    "severity": "MEDIUM"
+  },
+  {
+    "index": 400,
+    "order_id": "v1-260314-DEMO-009",
+    "type": "partial_capture_mismatch",
+    "description": "Order \u20b92,000, partial capture \u20b91,500, but settled full \u20b92,000",
+    "expected_action": "flag_over_settlement",
+    "severity": "MEDIUM"
+  },
+  {
+    "index": "450-457",
+    "order_ids": [
+      "v1-260314-DEMO-010-0",
+      "v1-260314-DEMO-010-1",
+      "v1-260314-DEMO-010-2",
+      "v1-260314-DEMO-010-3",
+      "v1-260314-DEMO-010-4",
+      "v1-260314-DEMO-010-5",
+      "v1-260314-DEMO-010-6",
+      "v1-260314-DEMO-010-7"
+    ],
+    "type": "midnight_burst",
+    "description": "8 UPI transactions from CUST_MIDNIGHT_001 between 2:00-2:56 AM",
+    "expected_action": "flag_unusual_activity",
+    "severity": "MEDIUM"
+  }
+]
